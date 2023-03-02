@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PizzaXTREME</title>
+        <meta name="description" content="Welcome to PizzaXTREME! Order a HOT pizza today!">
+        <meta name="robots" content="noindex, nofollow">
+        <!-- add fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- add CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- Using flex and grid. -->
+    </head>
+    <body>
+        <header>
+            <div>
+                <!-- Stolen from google images "Pizza Extreme logo" search -->
+                <a href="index.html">
+                    <img src="./img/logo.png" alt="header logo">
+                </a>
+            </div>
+            <nav>
+                <!-- Menu to help a user navigate the site -->
+                <menu>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#xtreme">XTREME Menu</a></li>
+                    <li><a href="#order">Order</a></li>
+                </menu>
+            </nav>
+        </header>
+        <!-- first "page" -->
+        <section class="masthead">
+            <div>
+                <h1>PizzaXTREME</h1>
+            </div>
+        </section>
+        <!-- main content -->
+        <!-- Using the content class to apply effects to both the main and aside -->
+        <main>
+            <section class="content title pizzas">
+                <a id="menu"></a>
+                <div>
+                    <h2>House Classics</h2>
+                </div>
+            </section>
+            <!-- Listing all 3 pizzas available from this fictional shop -->
+            <section class="content pizzas">
+                <div>
+                    <img src="./img/cheeseP.jpg" alt="Cheese Pizza image">
+                    <h3>Cheesey Pizza</h3>
+                </div>
+                <div>
+                    <img src="./img/pepperoniP.jpg" alt="Pepperoni Pizza image">
+                    <h3>Pepperoni Pizza</h3>
+                </div>
+                <div>
+                    <img src="./img/veggieP.jpg" alt="Veggie Pizza image">
+                    <h3>Veggie Pizza</h3>
+                </div>
+            </section>
+            <section class="content title pizzas">
+                <a id="xtreme"></a>
+                <div>
+                    <h2>XTREME Pizzas</h2>
+                </div>
+            </section>
+            <!-- Listing all 3 XTREME pizzas available from this fictional shop -->
+            <section class="content pizzas xpizzas">
+                <div>
+                    <img src="./img/cheeseP.jpg" alt="Cheese Pizza image">
+                    <h3>XTREME Cheesey</h3>
+                </div>
+                <div>
+                    <img src="./img/pepperoniP.jpg" alt="Pepperoni Pizza image">
+                    <h3>XTREME Meat Lovers</h3>
+                </div>
+                <div>
+                    <img src="./img/veggieP.jpg" alt="Veggie Pizza image">
+                    <h3>XTREME Plant Lovers</h3>
+                </div>
+            </section>
+        </main>
+        <!-- This would be a "Cart" if I knew how to make one so instead its an old-school order form -->
+        <aside>
+            <section class="content title">
+                <a id="order"></a>
+                <div>
+                    <h2>Order</h2>
+                </div>
+            </section>
+            <section class="content cart">
+                <!-- Form for ordering a pizza -->
+                <form action="./php/somefile.php" method="post" enctype="multipart/form-data">
+                    <div class="order">
+                        <h3>Base</h3>
+                        <!-- Choose from the 7 different "base" pizza options to build your custom pizza on top of -->
+                            <label for="base">Choose a Base to build on: </label>
+                            <select name="base" id="base">
+                                <option value="none">Bare Pizza Bread</option>
+                                <option value="cheese">Cheese Pizza</option>
+                                <option value="pepperoni">Pepperoni Pizza</option>
+                                <option value="veggie">Veggie Pizza</option>
+                                <option value="xcheese">XTREME Cheese Pizza</option>
+                                <option value="xpepperoni">XTREME Pepperoni Pizza</option>
+                                <option value="xveggie">XTREME Veggie Pizza</option>
+                            </select>
+                        <h3>Extra Toppings</h3>
+                        <!-- Choose from the section of checkboxes of what topping you want -->
+                        <label for="sauce">Pizza Sauce <input type="checkbox" id="sauce" name="sauce" value="pizzaSauce"></label>
+                        <label for="cheese">Cheese <input type="checkbox" id="cheese" name="cheese" value="cheese"></label>
+                        <label for="meat1">Chicken <input type="checkbox" id="meat1" name="meat1" value="Chicken"></label>
+                        <label for="meat2">Pepperoni <input type="checkbox" id="meat2" name="meat2" value="Pepperoni"></label>
+                        <label for="meat3">Ham <input type="checkbox" id="meat3" name="meat3" value="Ham"></label>
+                        <label for="veggie1">Pineapple <input type="checkbox" id="veggie1" name="veggie1" value="Pineapple"></label>
+                        <label for="veggie2">Bell Pepper <input type="checkbox" id="veggie2" name="veggie2" value="Bell Pepper"></label>
+                        <label for="veggie3">Onion <input type="checkbox" id="veggie3" name="veggie3" value="Onion"></label>
+                        <label for="veggie4">Jalapeno Pepper <input type="checkbox" id="veggie4" name="veggie4" value="Jalapeno Pepper"></label>
+                        <label for="veggie5">Mushroom <input type="checkbox" id="veggie5" name="veggie5" value="Mushroom"></label>
+                        <label for="veggie6">Olive <input type="checkbox" id="veggie6" name="veggie6" value="Olive"></label>
+                    </div>
+                    <div class="delivery">
+                        <h3>Delivery Method</h3>
+                        <!-- Choose a delivery method and time from the radio boxes and datetime selector-->
+                        <label for="pickup">Pickup in Store <input type="radio" id="pickup" name="deliver" required value="pickup"></label>
+                        <label for="delivery">Delivery <input type="radio" id="delivery" name="deliver" required value="delivery"></label>
+                        <label for="orderDate">Order Date <input type="datetime-local" id="orderDate" name="dateoforder" required></label>
+                    </div>
+                    <div class="details">
+                        <!-- Input the personal details of who to charge, where to go, and a how to notify you. -->
+                        <h3>Personal Info</h3>
+                        <input type="text" name="name" required placeholder="* Name">
+                        <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="* ###-###-####">
+                        <input type="text" name="email" placeholder="Email Address">
+                        <input type="text" name="address" required placeholder="* Billing Address">
+                    </div>
+                    <!-- Send the form off -->
+                    <input type="submit" value="Send">
+                </form>
+            </section>
+        </aside>
+        <!-- Contains info about the company and a form to relay any issues a customer has -->
+        <footer>
+            <div>
+                <a href="index.html"><img src="./img/logo.png" alt="footer logo"></a>
+            </div>
+            <div>
+                <!-- Random About Us that I came up with -->
+                <h4>About Us</h4>
+                <p>Founded in a pre-colonized Canada PizzaXTREME opened it's doors to customers in 1623! A family owned business from the start till now you can be sure your pizza will be the same great quality it always has been!</p>
+                <p>Visit us today at: 123 hacker lane, Toronto, ON, Canada</p>
+            </div>
+            <div>
+                <!-- Form to submit a complaint -->
+                <p>Issue with your order?</p>
+                <form method="post" action="some-php-file.php">
+                    <p><input type="text" placeholder="* Name" name="fullname" required></p>
+                    <p><input type="email" placeholder="* EMail" name="email" required></p>
+                    <p><input type="text" placeholder="* Describe the Issue" required></p>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </footer>
+    </body>
+</html>

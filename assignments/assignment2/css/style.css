@@ -1,0 +1,233 @@
+/******************/
+/* Global Styling */
+/******************/
+body{margin: 0px}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Abril Fatface', serif;
+}
+p,a,li,label{
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+/* Global Classes */
+.content{
+    padding: 2% 5%;
+    background-color: #f4f4f4;
+    color: #0e0e0e;
+    display: grid;
+}
+.btn-1{
+    background-color: #f4f4f4;
+    border: solid 2px #f4f4f4;
+    color: #0e0e0e;
+    border-radius: 5px;
+    padding: 15px 50px;
+}
+/******************/
+/*  Page Styling  */
+/******************/
+body{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: auto;
+    grid-template-areas:
+            "header header header header"
+            "hook hook hook hook"
+            "main main main cart"
+            "footer footer footer footer";
+}
+header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    height: 125px;
+    background-color: #0e0e0e;
+}
+header div{
+    flex-grow: 1;
+    height: 115px;
+}
+header div a img{
+    height: 100%;
+    width: auto;
+}
+header nav menu{
+     display: flex;
+    list-style: none;
+}
+header nav menu li{
+    padding: 0px 10px;
+}
+header nav menu li:last-child {
+    padding-right: 50px;
+}
+header nav menu li a{
+    color: #f4f4f4;
+}
+
+.masthead{
+    grid-area: hook;
+    height: 100vh;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+}
+.masthead div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+.masthead h1{
+    color: #f4f4f4;
+    font-size: 5em;
+}
+
+.title{
+    text-align: center;
+}
+
+main{
+    grid-area: main;
+}
+.pizzas{
+    grid-template-columns: repeat(3, 33.3%);
+}
+.pizzas div img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    filter: drop-shadow(3px 3px 5px #0e0e0e);
+}
+.pizzas div{
+    min-height: 150px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.xpizzas div img{
+    filter: drop-shadow(3px 3px 5px #0e0e0e);
+}
+
+aside{
+    grid-column: cart;
+    display: grid;
+}
+aside .title{
+    background-color: #ff1717;
+}
+.cart{
+    grid-template-columns: 100%;
+    background-color: #ff4b4b;
+}
+.cart div{
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: left;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    background-color: #0e0e0e;
+    color: #f4f4f4;
+}
+footer div{
+    padding: 10px;
+}
+footer div:nth-child(1){
+    height: 125px;
+    width: auto;
+}
+footer div:nth-child(1) img{
+    height: 100%;
+    width: auto;
+}
+footer form{
+    width: 325px;
+    height: auto;
+    padding: 15px;
+    padding-right: 30px;
+}
+footer form input{
+    width: 100%;
+}
+/* at this point our inspect element tool in our browser will become our best friend. Now to make our mobile adjustments. The most common "breakpoints" are 320px, 480px, 600px, 768px, 900px, 1024px, and 1200px. Now these breakpoints will depend on what the design looks like, but it is always important to check these breakpoints and there are multiple ways that we can approach them. For our lesson we are going to look at some examples on all the different ways we can make our changes as our screen gets smaller. Now let's go to our browser and open our inspect element tool. */
+/* For our first example we will use a media query rule that will apply to all sizes that meet our min-width rule. */
+
+/* @media screen and (max-width: 1024px){
+    aside{
+        grid-template-columns: 100%;
+    }
+    .example-3{
+        grid-template-columns: repeat(2,50%);
+    }
+    .example-3 div{
+        padding: 5%;
+    }
+    .example-3 div:nth-child(3){
+        order: 4;
+    }
+    .example-3 div:nth-child(4){
+        order: 3;
+    }
+}
+@media screen and (max-width: 768px){
+    .example-4, .example-5{
+        grid-template-columns: 100%;
+    }
+    .example-5 div:nth-child(1){
+        order: 2;
+    }
+    .example-5 div:nth-child(2){
+        order: 1;
+    }
+    footer{
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 620px){
+    body{
+        grid-template-areas:
+        "header header header header"
+        "bero bero bero bero"
+        "main main main main"
+        "sidebar sidebar sidebar sidebar"
+        "footer footer footer footer";
+    }
+}
+@media screen and (max-width: 545px){
+    header{
+        height: 160px;
+        flex-flow: column;
+        justify-content: center;
+    }
+    header nav menu{
+        padding: 0px;
+    }
+    .masthead h1{
+        font-size: 4em;
+    }
+    .example-2, .example-3{
+        grid-template-columns: 100%;
+    }
+    .example-3 div:nth-child(3){
+        order: 3;
+    }
+    .example-3 div:nth-child(4){
+        order: 4;
+    }
+} */
