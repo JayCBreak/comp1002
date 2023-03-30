@@ -10,14 +10,14 @@
 /* Page Styling */
 main {
     display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 body {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #0e0e0e;
 }
 p {
     margin: 0;
@@ -64,6 +64,7 @@ p {
     text-decoration: none;
     color: #f8f8f8;
     font-size: 10px;
+    text-shadow: 0px 0px 3px #f8f8f8;
 }
 
 /* Styling for the April 2nd date */
@@ -74,14 +75,14 @@ p {
 /* Poster Background */
 .poster {
     display: flex;
-	flex-direction: column;
-	background-image: url("../img/theMatrixBackground.jpg");
-	background-size: cover;
-	background-position: center;
-	/* Using this width and height because that is the same aspect ratio as the picture itself */
+    flex-direction: column;
+    background-image: url("../img/theMatrixBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    /* Using this width and height because that is the same aspect ratio as the picture itself */
     width: 600px;
-	height: 800px;
-	box-shadow: 0 0 10px #f8f8f8;
+    height: 800px;
+    box-shadow: 0 0 10px #f8f8f8;
     text-align: center;
     justify-content: center;
 }
