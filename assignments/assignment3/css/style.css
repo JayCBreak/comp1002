@@ -1,0 +1,92 @@
+/* Font Styling */
+.tech-font, .tech-font-sm, .title {
+    font-family: 'Share Tech Mono', monospace;
+    color: #f8f8f8;
+}
+.tech-font {
+    text-shadow: 0px 2px 15px blue;
+    font-weight: bold;
+}
+/* Page Styling */
+main {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Text on Poster */
+/* Actor Styling */
+.actors {
+    font-size: 1.7em;
+}
+
+/* Styling for the title overall + individual size and placement for THE and MATRIX */
+.title {
+    text-shadow: 0px 2px 15px blue;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.the {
+    font-size: 1em;
+    margin-top: 500px;
+}
+.matrix {
+    font-size: 4em;
+    margin-bottom: 25px;
+}
+
+/* Styling for the tiny super tall font credits */
+.credits {
+    font-family: 'Big Shoulders Text', sans-serif;
+    font-size: 8px;
+    color: #f8f8f8;
+    font-weight: bolder;
+    text-shadow: 0px 0px 3px #f8f8f8;
+}
+.credits-sm {
+    font-size: 5px;
+}
+
+/* Styling for the link at the bottom so that it works but doesn't look stupid */
+.tech-font-sm a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: #f8f8f8;
+    font-size: 10px;
+}
+
+/* Styling for the April 2nd date */
+.tech-font sup {
+    font-size: 10px;
+}
+
+/* Poster Background */
+.poster {
+    display: flex;
+	flex-direction: column;
+	background-image: url("../img/theMatrixBackground.jpg");
+	background-size: cover;
+	background-position: center;
+	/* Using this width and height because that is the same aspect ratio as the picture itself */
+    width: 600px;
+	height: 800px;
+	box-shadow: 0 0 10px #f8f8f8;
+    text-align: center;
+    justify-content: center;
+}
+.poster img {
+    height: 15px;
+    width: auto;
+    padding: 0px 50px;
+}
