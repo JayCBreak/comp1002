@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // Call Required Files
     $(function(){
-        $("#head").load("meta.html");
+        $("#meta").load("meta.html");
         $("#header").load("header.html");
         $("#footer").load("footer.html");
     });
