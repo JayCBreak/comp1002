@@ -1,0 +1,258 @@
+/* Page Setup */
+html{
+  scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Montserrat', sans-serif;
+}
+p, a, li{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+.blue{
+  color: #eeeeee;
+  background-color: #125784;
+}
+.purple{
+  color: #eeeeee;
+  background-color: #5e35b1;
+}
+.orange{
+  color: #eeeeee;
+  background-color: #f57f17;
+}
+.white{
+  color: #0e0e0e;
+  background-color: #eeeeee;
+}
+.black{
+  color: #eeeeee;
+  background-color: #0e0e0e;
+}
+/* Page Body */
+body{
+  background-color: #eeeeee;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 33.33333%);
+  grid-template-rows: auto;
+  grid-template-areas:
+          "header header header"
+          "mast mast mast"
+          "main main image1"
+          "image2 image3 image4"
+          "form form form"
+          "footer footer footer";
+}
+/* Page Header */
+header{
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  height: 125px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+header div{
+  flex-grow: 1;
+  height: 100px;
+}
+header div a img{
+  height: 100%;
+  width: auto;
+  padding-left: 20px;
+}
+.menu{
+  list-style: none;
+  display: flex;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+.menu li{
+  display: inline;
+}
+.menu li a,
+.menu li a:hover,
+.menu li a:focus,
+.menu li a:link{
+  text-decoration: none;
+  color: #eeeeee;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.menu p{
+  display: inline;
+  margin: 0 10px;
+}
+.search-bar{
+  display: inline;
+  margin: 0 10px;
+  text-align: right;
+  padding-right: 10px;
+}
+/* Page Content */
+.masthead{
+  grid-area: mast;
+  height: 100vh;
+  background-image: url(../img/img1.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+.masthead div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  padding: 20px 0px;
+}
+.masthead h1{
+  color: #eeeeee;
+  font-size: 4em;
+}
+
+.content{
+  grid-area: main;
+}
+.content div{
+  align-items: center;
+  justify-content: left;
+  padding: 20px 50px;
+}
+.content h2{
+  font-size: 3em;
+}
+.images img{
+  height: 310px;
+  width: auto;
+}
+.image1{
+  grid-area: image1;
+}
+.image2{
+  grid-area: image2;
+}
+.image3{
+  grid-area: image3;
+}
+.image4{
+  grid-area: image4;
+}
+.submission-form{
+  grid-area: form;
+  display: flex;
+  justify-content: center;
+}
+.submission-form div form{
+  padding: 50px 0px;
+  width: 70%;
+  box-sizing: border-box;
+}
+.submission-form div form input:first,
+.submission-form div form input:nth-child(2),
+.submission-form div form input:nth-child(3),
+.submission-form div form input:nth-child(6),
+.submission-form div form input:nth-child(7){
+  width: 100%;
+}
+/* Page Footer */
+footer{
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  height: 225px;
+}
+footer div{
+  height: 200px;
+  flex-grow: 1;
+}
+footer div a img{
+  height: 90%;
+  width: auto;
+  padding: 10px 20px;
+}
+footer div+div{
+  padding: 20px 50px;
+}
+
+/* Mobile Design! */
+@media screen and (max-width: 545px){
+  body{
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: 
+    "header header"
+    "mast mast"
+    "main main"
+    "image1 image1"
+    "image2 image3"
+    "image4 image4"
+    "form form"
+    "footer footer";
+  }
+  header{
+    height: 150px;
+  }
+  header div{
+    flex-grow: 0;
+    align-items: center;
+  }
+  header div a img{
+    display: block;
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu li{
+    display: block;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .menu li a,
+  .menu li a:hover,
+  .menu li a:focus,
+  .menu li a:link{
+    text-decoration: none;
+    color: #eeeeee;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .search-bar{
+    display: none;
+  }
+  .masthead{
+    height: 50vh;
+  }
+  .masthead h1{
+    font-size: 2.5em;
+    align-items: center;
+    justify-content: center;
+  }
+  .images img{
+    width: 100%;
+    height: 400px;
+  }
+  .image2 img,
+  .image3 img{
+    width: auto;
+    height: 225px;
+  }
+  footer{
+    height: 350px;
+  }
+  footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  footer div a img{
+    height: 100px;
+    width: auto;
+  }
+}
